@@ -1,3 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 /.idea/misc.xml
 /.idea/workspace.xml
+/taotao-manager-service/target/
+/taotao-manager-web/target/
+/*/target/
