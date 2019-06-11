@@ -4,3 +4,6 @@
 /taotao-manager-service/target/
 /taotao-manager-web/target/
 /*/target/
+/.idea/libraries/
+*.iml
+/out/
