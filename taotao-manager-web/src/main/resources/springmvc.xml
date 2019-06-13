@@ -27,6 +27,18 @@
     <!-- 引用dubbo服务 -->
     <dubbo:application name="taotao-manager-web"/>
     <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
+    <dubbo:monitor protocol="registry"/>
     <dubbo:reference interface="com.taotao.service.TestService" id="testService" />
     <dubbo:reference interface="com.taotao.service.ItemService" id="itemService" />
+
+<!--
+    <dubbo:protocol name="dubbo" port="${dubbo.port}"/>
+-->
+
+
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <!--数据库读取配置-->
+
+
+
 </beans>
