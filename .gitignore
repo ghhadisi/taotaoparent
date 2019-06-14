@@ -5,7 +5,7 @@
 /taotao-manager-web/target/
 /*/target/
 /.idea/libraries/
-*.iml
+
 /out/
-/*/*.iml
-/.idea/artifacts/
+
+

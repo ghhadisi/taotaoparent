@@ -15,6 +15,8 @@ import com.taotao.service.TestService;
  * @author ljh 
  * @version 1.0
  */
+//http://localhost:8089/test/qureyNow
+//http://localhost:8080/dubbo-admin-2.6.0/
 @Controller
 public class TestController {
 	@Autowired
