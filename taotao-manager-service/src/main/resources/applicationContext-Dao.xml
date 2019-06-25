@@ -24,13 +24,23 @@
 
     <!-- 配置SqlSessionFactory -->
     <!-- 让spring管理sqlsessionfactory 使用mybatis和spring整合包中的 -->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <!--<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+        <!--<property name="configLocation" value="classpath:/SqlMapConfig.xml" />-->
+    <!--</bean>-->
+
+    <!-- 设置Mapper扫描包 -->
+    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+        <!--<property name="basePackage" value="com.taotao.mapper" />-->
+    <!--</bean>-->
+
+    <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:/SqlMapConfig.xml" />
     </bean>
 
-    <!-- 设置Mapper扫描包 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.taotao.mapper" />
+        <property name="basePackage" value="com.taotao.mapper"/>
     </bean>
+
 </beans>
