@@ -1,12 +1,13 @@
 package com.taotao.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.taotao.pojo.TbContentCategory;
 import com.taotao.pojo.TbContentCategoryExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-public interface TbContentCategoryMapper {
-    int countByExample(TbContentCategoryExample example);
+public interface TbContentCategoryMapper extends BaseMapper<TbContentCategory> {
+   /* int countByExample(TbContentCategoryExample example);
 
     int deleteByExample(TbContentCategoryExample example);
 
@@ -26,5 +27,5 @@ public interface TbContentCategoryMapper {
 
     int updateByPrimaryKeySelective(TbContentCategory record);
 
-    int updateByPrimaryKey(TbContentCategory record);
+    int updateByPrimaryKey(TbContentCategory record);*/
 }

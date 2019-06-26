@@ -1,12 +1,13 @@
 package com.taotao.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.taotao.pojo.TbContent;
 import com.taotao.pojo.TbContentExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-public interface TbContentMapper {
-    int countByExample(TbContentExample example);
+public interface TbContentMapper extends BaseMapper<TbContent> {
+/*    int countByExample(TbContentExample example);
 
     int deleteByExample(TbContentExample example);
 
@@ -32,5 +33,5 @@ public interface TbContentMapper {
 
     int updateByPrimaryKeyWithBLOBs(TbContent record);
 
-    int updateByPrimaryKey(TbContent record);
+    int updateByPrimaryKey(TbContent record);*/
 }

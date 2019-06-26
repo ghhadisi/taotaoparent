@@ -1,12 +1,13 @@
 package com.taotao.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.taotao.pojo.TbOrder;
 import com.taotao.pojo.TbOrderExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-public interface TbOrderMapper {
-    int countByExample(TbOrderExample example);
+public interface TbOrderMapper  extends BaseMapper<TbOrderExample> {
+/*    int countByExample(TbOrderExample example);
 
     int deleteByExample(TbOrderExample example);
 
@@ -26,5 +27,5 @@ public interface TbOrderMapper {
 
     int updateByPrimaryKeySelective(TbOrder record);
 
-    int updateByPrimaryKey(TbOrder record);
+    int updateByPrimaryKey(TbOrder record);*/
 }

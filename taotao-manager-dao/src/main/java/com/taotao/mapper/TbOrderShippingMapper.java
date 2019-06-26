@@ -1,12 +1,13 @@
 package com.taotao.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.taotao.pojo.TbOrderShipping;
 import com.taotao.pojo.TbOrderShippingExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-public interface TbOrderShippingMapper {
-    int countByExample(TbOrderShippingExample example);
+public interface TbOrderShippingMapper  extends BaseMapper<TbOrderShippingExample> {
+  /*  int countByExample(TbOrderShippingExample example);
 
     int deleteByExample(TbOrderShippingExample example);
 
@@ -26,5 +27,5 @@ public interface TbOrderShippingMapper {
 
     int updateByPrimaryKeySelective(TbOrderShipping record);
 
-    int updateByPrimaryKey(TbOrderShipping record);
+    int updateByPrimaryKey(TbOrderShipping record);*/
 }
