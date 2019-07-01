@@ -17,19 +17,5 @@
         <module name="taotao-manager-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="portal" target="1.7" />
-      <module name="taotao-common" target="1.7" />
-      <module name="taotao-content" target="1.7" />
-      <module name="taotao-content-interface" target="1.7" />
-      <module name="taotao-content-service" target="1.7" />
-      <module name="taotao-manager" target="1.7" />
-      <module name="taotao-manager-dao" target="1.7" />
-      <module name="taotao-manager-interface" target="1.7" />
-      <module name="taotao-manager-pojo" target="1.7" />
-      <module name="taotao-manager-service" target="1.7" />
-      <module name="taotao-manager-web" target="1.7" />
-      <module name="taotaoparent" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>

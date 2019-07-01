@@ -27,8 +27,7 @@ private TbItemMapper mapper;
 		//3.创建example 对象 不需要设置查询条件
 		//4.根据mapper调用查询所有数据的方法
 		Page<TbItem> page2 = new Page<>(page,rows);
-		IPage<TbItem> presu =mapper.selectPage(page2, new QueryWrapper<TbItem>());
-
+		IPage<TbItem> presu =mapper.selectPage(page2, new QueryWrapper<TbItem>().lambda().eq(TbItem::getCid, x));
 		//6.封装到EasyUIDataGridResult
 		EasyUIDataGridResult result = new EasyUIDataGridResult();
 		result.setTotal((int) presu.getTotal());

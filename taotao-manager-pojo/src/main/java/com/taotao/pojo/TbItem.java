@@ -1,5 +1,8 @@
 package com.taotao.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -8,6 +11,7 @@ public class TbItem implements Serializable{
 
     private String title;
 
+    @TableField("sellPoint")
     private String sellPoint;
 
     private Long price;
