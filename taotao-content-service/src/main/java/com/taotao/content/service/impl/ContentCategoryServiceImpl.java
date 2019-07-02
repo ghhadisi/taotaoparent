@@ -71,7 +71,7 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
 		//3.返回taotaoresult 包含内容分类的id   需要主键返回
 		
 		//判断如果要添加的节点的父节点本身叶子节点  需要更新其为父节点
-		TbContentCategory parent = mapper.selectOne(new QueryWrapper<TbContentCategory>().eq("parentId",parentId));
+		TbContentCategory parent = mapper.selectOne(new QueryWrapper<TbContentCategory>().lambda().eq(TbContentCategory::getParentId, parentId));
 		if(parent.getIsParent()==false){//原本就是叶子节点
 			parent.setIsParent(true);
 			mapper.updateById(parent);//更新节点的is_parent属性为true

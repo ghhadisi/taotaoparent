@@ -106,7 +106,7 @@
         </dependency>
         <dependency>
             <groupId>com.hss.</groupId>
-            <artifactId>taotao-manager-interface</artifactId>
+            <artifactId>taotao-content-interface</artifactId>
             <version>1.0.0</version>
             <scope>compile</scope>
         </dependency>
