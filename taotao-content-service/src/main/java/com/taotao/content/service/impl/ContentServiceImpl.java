@@ -1,7 +1,9 @@
 package com.taotao.content.service.impl;
 
 import java.util.Date;
+import java.util.List;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +28,11 @@ public class ContentServiceImpl implements ContentService {
 		//3.插入内容表中
 		mapper.insert(content);
 		return TaotaoResult.ok();
+	}
+
+	@Override
+	public List<TbContent> getContentListByCatId(Long categoryId) {
+		return mapper.selectList(new QueryWrapper<TbContent>().lambda().eq(TbContent::getCategoryId,categoryId));
 	}
 
 }
