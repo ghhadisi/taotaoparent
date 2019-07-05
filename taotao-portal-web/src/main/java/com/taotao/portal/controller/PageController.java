@@ -1,5 +1,6 @@
 package com.taotao.portal.controller;
 
+import com.alibaba.dubbo.common.json.JSON;
 import com.taotao.content.service.ContentService;
 import com.taotao.pojo.TbContent;
 import com.taotao.portal.controller.pojo.Ad1Node;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,17 +49,17 @@ public class PageController {
 	 * @return
 	 */
 	//接收URL的请求http://localhost:8082/index.html
-	@RequestMapping("/index")
-	public String showIndex(){
-		return "index";//响应jsp
-	}
+//	@RequestMapping("/index")
+//	public String showIndex(){
+//		return "index";//响应jsp
+//	}
 	/**
 	 * 展示首页
 	 * @return
 	 */
 	//接收URL的请求http://localhost:8082/index.html
 	@RequestMapping("/index")
-	public String showIndex(Model model){
+	public String showIndex(Model model) throws IOException {
 		//引入服务
 		//注入服务
 		//添加业务逻辑，根据内容分类的id 查询 内容列表
@@ -77,9 +79,8 @@ public class PageController {
 			nodes.add(node);
 		}
 
-		GsonFactoryBean
 		//传递数据给JSP
-		model.addAttribute("ad1", .objectToJson(nodes));
+		model.addAttribute("ad1", JSON.json(nodes));
 		return "index";//响应jsp
 	}
 }

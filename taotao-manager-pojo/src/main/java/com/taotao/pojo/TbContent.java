@@ -4,11 +4,16 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
 @TableName("TbContent")
-public class TbContent {
+public class TbContent implements Serializable {
+
+
+    @TableField(exist = false)
+    private static final long serialVersionUID = 4026793716281415859L;
     private Long id;
 
     @TableField("categoryId")
