@@ -8,9 +8,9 @@
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
 	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
-<!--
-    <context:property-placeholder location="classpath:config/jdbc.properties" />
--->
+
+    <context:property-placeholder location="classpath:properties/resource.properties" />
+
 
    <context:component-scan base-package="com.taotao.content.service" />
 
@@ -25,4 +25,43 @@
     <!-- 声明需要暴露的服务接口 -->
     <dubbo:service interface="com.taotao.content.service.ContentCategoryService" ref="contentCategoryServiceImpl"  timeout="300000"/>
     <dubbo:service interface="com.taotao.content.service.ContentService" ref="contentServiceImpl"  timeout="300000"/>
+
+
+ <bean class="redis.clients.jedis.JedisPool">
+  <constructor-arg name="host" value="127.0.0.1"></constructor-arg>
+  <constructor-arg name="port" value="6379"></constructor-arg>
+ </bean>
+ <bean class="com.taotao.content.service.jdis.JedisClientPool"></bean>
+ <!-- 配置集群版 -->
+ <!-- <bean class="redis.clients.jedis.JedisCluster">
+     <constructor-arg name="nodes">
+         <set>
+             <bean class="redis.clients.jedis.HostAndPort">
+                 <constructor-arg name="host" value="192.168.25.153"></constructor-arg>
+                 <constructor-arg name="port" value="7001"></constructor-arg>
+             </bean>
+             <bean class="redis.clients.jedis.HostAndPort">
+                 <constructor-arg name="host" value="192.168.25.153"></constructor-arg>
+                 <constructor-arg name="port" value="7002"></constructor-arg>
+             </bean>
+             <bean class="redis.clients.jedis.HostAndPort">
+                 <constructor-arg name="host" value="192.168.25.153"></constructor-arg>
+                 <constructor-arg name="port" value="7003"></constructor-arg>
+             </bean>
+             <bean class="redis.clients.jedis.HostAndPort">
+                 <constructor-arg name="host" value="192.168.25.153"></constructor-arg>
+                 <constructor-arg name="port" value="7004"></constructor-arg>
+             </bean>
+             <bean class="redis.clients.jedis.HostAndPort">
+                 <constructor-arg name="host" value="192.168.25.153"></constructor-arg>
+                 <constructor-arg name="port" value="7005"></constructor-arg>
+             </bean>
+             <bean class="redis.clients.jedis.HostAndPort">
+                 <constructor-arg name="host" value="192.168.25.153"></constructor-arg>
+                 <constructor-arg name="port" value="7006"></constructor-arg>
+             </bean>
+         </set>
+     </constructor-arg>
+ </bean>
+ <bean class="com.taotao.content.jedis.JedisClientCluster"></bean> -->
 </beans>
