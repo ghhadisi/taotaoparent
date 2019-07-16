@@ -19,6 +19,7 @@
         <module>taotao-content</module>
         <module>taotao-content-interface</module>
         <module>taotao-content-service</module>
+        <module>activemqtest</module>
     </modules>
 
     <packaging>pom</packaging>
