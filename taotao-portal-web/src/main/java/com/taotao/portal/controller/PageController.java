@@ -83,4 +83,9 @@ public class PageController {
 		model.addAttribute("ad1", JSON.json(nodes));
 		return "index";//响应jsp
 	}
+
+	@RequestMapping(value = "test")
+	public String test(Model  model){
+		return "test";
+	}
 }
