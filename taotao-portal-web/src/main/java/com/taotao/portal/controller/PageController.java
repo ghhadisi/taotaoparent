@@ -84,7 +84,7 @@ public class PageController {
 		return "index";//响应jsp
 	}
 
-	@RequestMapping(value = "test")
+	@RequestMapping(value = "/test")
 	public String test(Model  model){
 		return "test";
 	}

@@ -43,6 +43,26 @@
   <servlet-mapping>
     <servlet-name>taotao-portal-web</servlet-name>
     <!-- SEO :搜索引擎优化   伪静态化-->
+<!--
     <url-pattern>*.html</url-pattern>
+-->
+    <url-pattern>*.do</url-pattern>
+
   </servlet-mapping>
+  <!--
+  https://www.cnblogs.com/dssjustdoit/articles/9390395.html
+  1.设置url-pattern为*.do(最为常见的方式)
+只要你的请求url中包含配置的url-pattern，该url就可以到达DispatcherServlet。当然这里业内通常都将url-pattern配置为*.do的方式，所以你最好也这么去做。
+
+
+
+2.设置url-pattern为/*(这种方式是很不好)
+ 如果将url-pattern设置为/*之后，web项目中的jsp都不能访问了会报出404的错误，这是因为DispatcherServlet会将向JSP页面的跳转请求也当作是一个普通的 Controller 请求，会对其进行处理，而此时是找不到与其相应的controller。
+
+ 3.设置url-pattern为/(用的越来越多)
+
+ 如果将url-pattern设置为/之后，只要是在web.xml文件中找不到匹配的URL，它们的访问请求都将交给DispatcherServlet处理，静态资源：css文件,js文件,图片也会被拦截并交给DispatcherServlet处理。该配置方式不会拦截.jsp文件和.jspx文件，因为这个在tomcat中的conf目录里面的web.xml文件中已经添加的相应的处理方式了，他会交给org.apache.jasper.servlet.JspServlet来处理。即我们可以正常访问系统中的jsp文件。
+
+
+  -->
 </web-app>

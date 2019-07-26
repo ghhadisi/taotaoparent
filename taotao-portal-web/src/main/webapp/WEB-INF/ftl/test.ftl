@@ -24,14 +24,14 @@
 
                 </#list>-->
 
-    <#list  users as item>
-<#--    <tr>
-        <td>${item_index}</td>
-        <td>${item.name}</td>
-        <td>${user.age}</td>
-        <td>${user.salary?c}</td>
-    </tr>-->
-    </#list>
+    <#--    <#list  users as item>
+      <tr>
+           <td>${item_index}</td>
+           <td>${item.name}</td>
+           <td>${user.age}</td>
+           <td>${user.salary?c}</td>
+       </tr>
+    </#list>-->
     <tbody>
 
 </table>
