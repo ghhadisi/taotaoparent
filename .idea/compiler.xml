@@ -17,6 +17,9 @@
         <module name="taotao-manager-pojo" />
         <module name="taotao-manager-service" />
         <module name="taotao-manager-web" />
+        <module name="taotao-sso" />
+        <module name="taotao-sso-interface" />
+        <module name="taotao-sso-web" />
         <module name="taotaosso" />
         <module name="taotaossointerface" />
         <module name="taotaossoweb" />

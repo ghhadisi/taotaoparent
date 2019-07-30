@@ -1,6 +1,8 @@
 package com.taotao.sso.controller;
 
 import com.taotao.common.pojo.TaotaoResult;
+import com.taotao.common.util.CookieUtils;
+import com.taotao.common.util.JsonUtils;
 import com.taotao.sso.service.UserLoginService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +41,7 @@ public class UserLoginController {
 
         //4.需要设置token到cookie中 可以使用 工具类  cookie需要跨域
         if(result.getStatus()==200){
-            com.taotao.common.pojo.util.CookieUtils.setCookie(request, response,TT_TOKEN_KEY, result.getData().toString());
+            CookieUtils.setCookie(request, response,TT_TOKEN_KEY, result.getData().toString());
         }
         return result;
     }
@@ -59,12 +61,12 @@ public class UserLoginController {
         if(StringUtils.isNotBlank(callback)){
             //如果是jsonp 需要拼接 类似于fun({id:1});
             TaotaoResult result = loginservice.getUserByToken(token);
-            String jsonpstr = callback+"("+ com.taotao.common.pojo.util.JsonUtils.objectToJson(result)+")";
+            String jsonpstr = callback+"("+ JsonUtils.objectToJson(result)+")";
             return jsonpstr;
         }
         //如果不是jsonp
         //1.调用服务
         TaotaoResult result = loginservice.getUserByToken(token);
-        return com.taotao.common.pojo.util.JsonUtils.objectToJson(result);
+        return JsonUtils.objectToJson(result);
     }
 }

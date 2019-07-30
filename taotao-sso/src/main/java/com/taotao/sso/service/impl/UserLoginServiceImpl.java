@@ -2,6 +2,7 @@ package com.taotao.sso.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.taotao.common.pojo.TaotaoResult;
+import com.taotao.common.util.JsonUtils;
 import com.taotao.mapper.TbUserMapper;
 import com.taotao.pojo.TbUser;
 import com.taotao.pojo.TbUserExample;
@@ -51,7 +52,7 @@ public class UserLoginServiceImpl implements UserLoginService {
         //存放用户数据到redis中，使用jedis的客户端,为了管理方便加一个前缀"kkk:token"
         //设置密码为空
         user.setPassword(null);
-        client.set(USER_INFO+":"+token, com.taotao.common.pojo.util.JsonUtils.objectToJson(user));
+        client.set(USER_INFO+":"+token, JsonUtils.objectToJson(user));
         //设置过期时间
         client.expire(USER_INFO+":"+token, EXPIRE_TIME);
         return  TaotaoResult.ok(token);
@@ -65,7 +66,7 @@ public class UserLoginServiceImpl implements UserLoginService {
         //3.判断是否查询到
         if(StringUtils.isNotBlank(strjson)){
             //5.如果查询到  需要返回200  包含用户的信息  用户信息转成对象
-            TbUser user = com.taotao.common.pojo.util.JsonUtils.jsonToPojo(strjson, TbUser.class);
+            TbUser user = JsonUtils.jsonToPojo(strjson, TbUser.class);
             //重新设置过期时间
             client.expire(USER_INFO+":"+token, EXPIRE_TIME);
             return TaotaoResult.ok(user);
