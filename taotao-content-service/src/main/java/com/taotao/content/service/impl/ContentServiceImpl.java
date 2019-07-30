@@ -23,8 +23,8 @@ public class ContentServiceImpl implements ContentService {
 	@Autowired
 	private TbContentMapper mapper;
 
-//	@Value("${CONTENT_KEY}")
-	private String CONTENT_KEY = "CONTENT_KEY";
+	@Value("${CONTENT_KEY}")
+	private String CONTENT_KEY ;
 	
 	@Override
 	public TaotaoResult saveContent(TbContent content) {

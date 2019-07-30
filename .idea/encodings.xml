@@ -14,6 +14,8 @@
     <file url="file://$PROJECT_DIR$/taotao-manager-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/taotao-manager-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/taotao-portal-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/taotao-sso" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/taotao-sso-interface" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

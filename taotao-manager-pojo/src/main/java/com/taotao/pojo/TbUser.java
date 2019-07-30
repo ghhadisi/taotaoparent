@@ -1,8 +1,13 @@
 package com.taotao.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbUser {
+public class TbUser implements Serializable {
+
+
+    private static final long serialVersionUID = 8182354002663624978L;
+
     private Long id;
 
     private String username;

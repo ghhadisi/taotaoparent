@@ -20,6 +20,8 @@
         <module>taotao-content-interface</module>
         <module>taotao-content-service</module>
         <module>activemqtest</module>
+        <module>taotao-sso</module>
+        <module>taotao-sso-interface</module>
     </modules>
 
     <packaging>pom</packaging>

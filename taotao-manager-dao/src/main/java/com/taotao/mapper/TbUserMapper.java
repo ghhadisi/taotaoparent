@@ -6,7 +6,7 @@ import com.taotao.pojo.TbUserExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-public interface TbUserMapper  extends BaseMapper<TbUserExample> {
+public interface TbUserMapper  extends BaseMapper<TbUser> {
 /*    int countByExample(TbUserExample example);
 
     int deleteByExample(TbUserExample example);
