@@ -52,7 +52,7 @@ public class UserLoginServiceImpl implements UserLoginService {
         //设置密码为空
         user.setPassword(null);
         client.set(USER_INFO+":"+token, com.taotao.common.pojo.util.JsonUtils.objectToJson(user));
-        //设置过期时间 来模拟session
+        //设置过期时间
         client.expire(USER_INFO+":"+token, EXPIRE_TIME);
         return  TaotaoResult.ok(token);
     }

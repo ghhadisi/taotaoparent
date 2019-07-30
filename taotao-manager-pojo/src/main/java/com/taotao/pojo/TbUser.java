@@ -1,8 +1,11 @@
 package com.taotao.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
 
+@TableName("user")
 public class TbUser implements Serializable {
 
 
