@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@CrossOrigin
 @Controller
 @RequestMapping(value = "/user")
 public class UserLoginController {
@@ -60,7 +61,7 @@ private String TT_TOKEN_KEY = "TT_TOKEN";
      */
     @RequestMapping(value="/rest/token/{token}",method=RequestMethod.GET,produces= MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
-    public String getUserByToken(@PathVariable String token,@RequestParam("callback")  String callback){
+    public String getUserByToken(@PathVariable String token, String callback){//@RequestParam("callback")
 
         //判断是否是Jsonp请求
         if(StringUtils.isNotBlank(callback)){
