@@ -9,10 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -63,7 +60,7 @@ private String TT_TOKEN_KEY = "TT_TOKEN";
      */
     @RequestMapping(value="/rest/token/{token}",method=RequestMethod.GET,produces= MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
-    public String getUserByToken(@PathVariable String token, String callback){
+    public String getUserByToken(@PathVariable String token,@RequestParam("callback")  String callback){
 
         //判断是否是Jsonp请求
         if(StringUtils.isNotBlank(callback)){
