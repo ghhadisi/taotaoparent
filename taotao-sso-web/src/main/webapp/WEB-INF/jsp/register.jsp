@@ -27,7 +27,7 @@
         </ul>
         <div class="extra">
         <span>我已经注册，现在就&nbsp;
-        	<a href="/page/login" class="flk13">登录</a>
+        	<a href="/user/login" class="flk13">登录</a>
         </span>
         </div>
     </div>
@@ -148,12 +148,12 @@
 		beforeSubmit:function() {
 				//检查用户是否已经被占用
 				$.ajax({
-	            	url : REGISTER.param.surl + "/user/check/"+escape($("#regName").val())+"/1?r=" + Math.random(),
+	            	url : REGISTER.param.surl + "/user/rest/check/"+escape($("#regName").val())+"/1?r=" + Math.random(),
 	            	success : function(data) {
 	            		if (data.data) {//taotaoresult.data :true |false
 	            			//检查手机号是否存在
 	            			$.ajax({
-	            				url : REGISTER.param.surl + "/user/check/"+$("#phone").val()+"/2?r=" + Math.random(),
+	            				url : REGISTER.param.surl + "/user/rest/check/"+$("#phone").val()+"/2?r=" + Math.random(),
 				            	success : function(data) {//手机号没有被注册，现在可以用
 				            		if (data.data) {
 					            		REGISTER.doSubmit();
@@ -173,7 +173,7 @@
 		},
 		doSubmit:function() {
 			//$("#personRegForm").serialize()
-			$.post("/user/register",$("#personRegForm").serialize(), function(data){
+			$.post("/user/rest/register",$("#personRegForm").serialize(), function(data){
 				if(data.status == 200){
 					alert('用户注册成功，请登录！');
 					REGISTER.login();//跳转到登录的页面
@@ -183,7 +183,7 @@
 			});
 		},
 		login:function() {
-			 location.href = "/page/login";
+			 location.href = "/user/login";
 			 return false;
 		},
 		reg:function() {

@@ -75,11 +75,11 @@
 				return true;
 			},
 			doLogin:function() {
-				$.post("/user/login", $("#formlogin").serialize(),function(data){
+				$.post("/user/rest/login", $("#formlogin").serialize(),function(data){
 					if (data.status == 200) {
 						alert("登录成功！");
 						if (redirectUrl == "") {
-							location.href = "http://localhost:8082";
+							location.href = "http://localhost:8084/index.do";
 						} else {
 							location.href = redirectUrl;
 						}

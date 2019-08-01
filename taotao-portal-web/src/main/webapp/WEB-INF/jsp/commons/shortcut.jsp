@@ -74,3 +74,17 @@
 		<span class="clr"></span>
 	</div>
 </div>
+
+<script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
+
+<script type="text/javascript">
+      var usrToken = 	readCookie("TT_TOKEN");
+      if (usrToken != null ){
+          var  url = "http://localhost:8086/user/rest/token/"+usrToken;
+          console.log(usrToken);
+          console.log(url);
+          $.get(url, function(data,status){
+				alert(data)
+		  });
+	  }
+</script>

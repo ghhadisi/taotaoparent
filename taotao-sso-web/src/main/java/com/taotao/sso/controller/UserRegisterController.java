@@ -11,10 +11,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
+@RequestMapping(value = "/user")
 public class UserRegisterController {
     @Autowired
     private UserRegisterService registerservice;
 
+
+    @RequestMapping(value="/register",method=RequestMethod.GET)
+    public String register(){
+        //
+        return "register";
+    }
     /**
      * url：/user/check/{param}/{type}
      *
@@ -22,7 +29,7 @@ public class UserRegisterController {
      * @param type  1  2 3
      * @return
      */
-    @RequestMapping(value="/user/check/{param}/{type}",method= RequestMethod.GET)
+    @RequestMapping(value="/rest/check/{param}/{type}",method= RequestMethod.GET)
     @ResponseBody
     public TaotaoResult checkData(@PathVariable String param, @PathVariable Integer type){
         //1.引入服务
@@ -45,7 +52,7 @@ public class UserRegisterController {
      * @param user
      * @return
      */
-    @RequestMapping(value="/user/register",method=RequestMethod.POST)
+    @RequestMapping(value="/rest/register",method=RequestMethod.POST)
     @ResponseBody
     public TaotaoResult register(TbUser user){
         //

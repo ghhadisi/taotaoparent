@@ -18,12 +18,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Controller
+@RequestMapping(value = "/user")
 public class UserLoginController {
     @Autowired
     private UserLoginService loginservice;
 
-    @Value("${TT_TOKEN_KEY}")
-    private String TT_TOKEN_KEY;
+
+//    @Value("${TT_TOKEN_KEY}")
+//    private String TT_TOKEN_KEY;
+private String TT_TOKEN_KEY = "TT_TOKEN";
+
+    @RequestMapping(value="/login",method= RequestMethod.GET)
+    public String login(){
+        return "login";
+    }
 
     /**
      * url:/user/login
@@ -31,7 +39,7 @@ public class UserLoginController {
      * 返回值：json
      * 请求限定的方法：post
      */
-    @RequestMapping(value="/user/login",method= RequestMethod.POST)
+    @RequestMapping(value="/rest/login",method= RequestMethod.POST)
     @ResponseBody
     public TaotaoResult login(HttpServletRequest request, HttpServletResponse response, String username, String password){
         //1.引入服务
@@ -53,7 +61,7 @@ public class UserLoginController {
      * 返回值：json
      * 请求限定的方法：get
      */
-    @RequestMapping(value="/user/token/{token}",method=RequestMethod.GET,produces= MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value="/rest/token/{token}",method=RequestMethod.GET,produces= MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public String getUserByToken(@PathVariable String token, String callback){
 
