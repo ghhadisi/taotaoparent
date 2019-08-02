@@ -22,9 +22,9 @@ public class UserLoginController {
     private UserLoginService loginservice;
 
 
-//    @Value("${TT_TOKEN_KEY}")
-//    private String TT_TOKEN_KEY;
-private String TT_TOKEN_KEY = "TT_TOKEN";
+    @Value("${TT_TOKEN_KEY}")
+    private String TT_TOKEN_KEY;
+//private String TT_TOKEN_KEY = "TT_TOKEN";
 
     @RequestMapping(value="/login",method= RequestMethod.GET)
     public String login(){
