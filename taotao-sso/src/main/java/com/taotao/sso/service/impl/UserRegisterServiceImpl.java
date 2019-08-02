@@ -77,8 +77,8 @@ public class UserRegisterServiceImpl implements UserRegisterService {
             }
         }
         //3.如果校验成功   补全其他的属性
-        user.setCreated(new Date());
-        user.setUpdated(user.getCreated());
+//        user.setCreated(new Date());
+//        user.setUpdated(user.getCreated());
         //4.对密码进行MD5加密
         String md5password = DigestUtils.md5DigestAsHex(user.getPassword().getBytes());
         user.setPassword(md5password);

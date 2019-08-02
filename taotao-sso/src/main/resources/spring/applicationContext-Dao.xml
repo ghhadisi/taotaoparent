@@ -67,6 +67,14 @@
                       class="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor"></bean>
             </array>
         </property>
+
+        <property name="globalConfig">
+            <bean class="com.baomidou.mybatisplus.core.config.GlobalConfig">
+                <property name="metaObjectHandler">
+                    <bean class="com.taotao.handler.MyBatisInsertHandler" />
+                </property>
+            </bean>
+        </property>
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">

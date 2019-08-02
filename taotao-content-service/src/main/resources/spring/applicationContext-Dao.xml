@@ -56,6 +56,12 @@
                 </property>
             </bean>
         </property>-->
+        <!-- 设置vfs实现，避免路径扫描问题 -->
+<!--
+        <property name="vfs"  value="com.baomidou.mybatisplus.spring.boot.starter.SpringBootVFS"></property>
+-->
+
+
 
         <property name="plugins">
             <array> <!-- 分页插件配置 -->
