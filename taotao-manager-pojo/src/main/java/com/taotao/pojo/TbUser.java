@@ -8,8 +8,9 @@ import java.util.Date;
 @TableName("user")
 public class TbUser implements Serializable {
 
-
+    @TableField(exist = false)
     private static final long serialVersionUID = 8182354002663624978L;
+
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 

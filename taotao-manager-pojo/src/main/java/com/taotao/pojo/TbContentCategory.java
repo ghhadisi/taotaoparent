@@ -1,5 +1,6 @@
 package com.taotao.pojo;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -24,8 +25,10 @@ public class TbContentCategory {
     @TableField("isParent")
     private Boolean isParent;
 
+    @TableField(fill= FieldFill.INSERT)
     private Date created;
 
+    @TableField(fill=FieldFill.INSERT_UPDATE)
     private Date updated;
 
 }

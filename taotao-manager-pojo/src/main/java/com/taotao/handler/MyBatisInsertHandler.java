@@ -9,7 +9,9 @@ import java.util.Date;
 public class MyBatisInsertHandler  implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
-        this.setFieldValByName("created", new Date(), metaObject);
+        Date now = new Date();
+        this.setFieldValByName("created", now, metaObject);
+        this.setFieldValByName("updated", now, metaObject);
 
     }
 
