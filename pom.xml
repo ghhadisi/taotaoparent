@@ -23,6 +23,10 @@
         <module>taotao-sso</module>
         <module>taotao-sso-interface</module>
         <module>taotao-sso-web</module>
+        <module>taotao-cart-interface</module>
+        <module>taotao-cart-service</module>
+        <module>redis</module>
+        <module>taotao-cart-web</module>
     </modules>
 
     <packaging>pom</packaging>

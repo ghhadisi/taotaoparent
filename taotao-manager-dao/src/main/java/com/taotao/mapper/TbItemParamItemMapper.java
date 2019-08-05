@@ -2,11 +2,10 @@ package com.taotao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.taotao.pojo.TbItemParamItem;
-import com.taotao.pojo.TbItemParamItemExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-public interface TbItemParamItemMapper  extends BaseMapper<TbItemParamItemExample> {
+public interface TbItemParamItemMapper  extends BaseMapper<TbItemParamItem> {
    /* int countByExample(TbItemParamItemExample example);
 
     int deleteByExample(TbItemParamItemExample example);

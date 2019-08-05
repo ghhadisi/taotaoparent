@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="activemqtest" />
         <module name="portal" />
+        <module name="redis" />
         <module name="taotao-common" />
         <module name="taotao-content-interface" />
         <module name="taotao-content-service" />
@@ -20,6 +21,9 @@
         <module name="taotao-sso" />
         <module name="taotao-sso-interface" />
         <module name="taotao-sso-web" />
+        <module name="taotaocartinterface" />
+        <module name="taotaocartservice" />
+        <module name="taotaocartweb" />
         <module name="taotaosso" />
         <module name="taotaossointerface" />
         <module name="taotaossoweb" />

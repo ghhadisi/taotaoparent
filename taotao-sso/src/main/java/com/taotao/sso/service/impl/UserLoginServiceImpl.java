@@ -5,7 +5,6 @@ import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.common.util.JsonUtils;
 import com.taotao.mapper.TbUserMapper;
 import com.taotao.pojo.TbUser;
-import com.taotao.pojo.TbUserExample;
 import com.taotao.sso.service.UserLoginService;
 import com.taotao.sso.service.jedis.JedisClient;
 import org.apache.commons.lang3.StringUtils;

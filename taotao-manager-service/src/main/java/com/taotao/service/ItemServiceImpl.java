@@ -5,19 +5,20 @@ import java.util.List;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.taotao.common.pojo.EasyUIDataGridResult;
 import com.taotao.mapper.TbItemMapper;
 import com.taotao.pojo.TbItem;
-import com.taotao.pojo.TbItemExample;
 import com.taotao.service.ItemService;
 
 @Service
-public class ItemServiceImpl implements ItemService {
-@Autowired
-private TbItemMapper mapper;
+public class ItemServiceImpl  extends ServiceImpl<TbItemMapper, TbItem> implements ItemService  {
+	@Autowired
+	private TbItemMapper mapper;
 	@Override
 	public EasyUIDataGridResult getItemList(Integer page, Integer rows) {
 		//1.设置分页的信息 使用pagehelper

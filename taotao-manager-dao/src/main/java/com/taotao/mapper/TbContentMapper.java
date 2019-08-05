@@ -2,7 +2,6 @@ package com.taotao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.taotao.pojo.TbContent;
-import com.taotao.pojo.TbContentExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

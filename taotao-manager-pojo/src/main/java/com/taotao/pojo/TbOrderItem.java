@@ -1,12 +1,13 @@
 package com.taotao.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 @Data
 public class TbOrderItem {
-    private String id;
-
-    private String itemId;
+    @TableId(value = "id",type = IdType.AUTO)
+    private Long itemId;
 
     private String orderId;
 
