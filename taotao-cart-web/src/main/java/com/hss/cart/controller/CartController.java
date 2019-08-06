@@ -36,6 +36,12 @@ public class CartController {
     @Value("${TT_CART_KEY}")
     private String TT_CART_KEY;
 
+
+    @RequestMapping("/cart")
+    public String cart(){
+        return "cart";
+    }
+
     /**
      * url:/cart/add/{itemId}?num=2 参数：商品的id 以及num 返回值：jsp页面
      *

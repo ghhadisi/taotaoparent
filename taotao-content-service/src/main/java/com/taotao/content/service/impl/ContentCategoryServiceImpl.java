@@ -13,8 +13,6 @@ import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.content.service.ContentCategoryService;
 import com.taotao.mapper.TbContentCategoryMapper;
 import com.taotao.pojo.TbContentCategory;
-import com.taotao.pojo.TbContentCategoryExample;
-import com.taotao.pojo.TbContentCategoryExample.Criteria;
 
 /**
  * 内容分类
@@ -33,7 +31,7 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
 	public List<EasyUITreeNode> getContentCategoryList(Long parentId) {
 		//1.注入mapper
 		//2.创建example
-		TbContentCategoryExample example = new TbContentCategoryExample();
+//		TbContentCategoryExample example = new TbContentCategoryExample();
 		//3.设置条件
 //		Criteria criteria = example.createCriteria();
 //		criteria.andParentIdEqualTo(parentId);//select * from tbcontentcategory where parent_id=1
