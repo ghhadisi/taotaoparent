@@ -74,3 +74,36 @@
 		<span class="clr"></span>
 	</div>
 </div>
+
+<script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
+
+<script type="text/javascript">
+      var usrToken = 	readCookie("TT_TOKEN");
+      if (usrToken != null ){
+          var  url = "http://localhost:8086/user/rest/token/"+usrToken;
+          console.log(usrToken);
+          console.log(url);
+          $.get(url, function(data,status){
+				// alert(data)
+              if (data.status==200){
+                  $("#loginbar").text(data.data.username);
+              }
+		  });
+
+          // $.ajax({
+          //     type:"GET",
+          //     url:url, //访问的链接
+          //     dataType:"jsonp",  //数据格式设置为jsonp
+          //     jsonp:"callback",  //Jquery生成验证参数的名称
+          //     success:function(data){  //成功的回调函数
+          //         // alert(data);
+			// 	  if (data.status==200){
+          //             $("#loginbar").text(data.data.username);
+          //         }
+          //     },
+          //     error: function (e) {
+          //         alert("error");
+          //     }
+          // });
+	  }
+</script>
