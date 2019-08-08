@@ -12,7 +12,7 @@ import com.taotao.pojo.TbItem;
  * @author ljh 
  * @version 1.0
  */
-public interface ItemService  {//extends IService<TbItem>
+public interface ItemService  extends IService<TbItem>{//
 	
 	/**
 	 *  根据当前的页码和每页 的行数进行分页查询
@@ -22,6 +22,7 @@ public interface ItemService  {//extends IService<TbItem>
 	 */
 	public EasyUIDataGridResult getItemList(Integer page, Integer rows);
 
-	public TbItem  getById(Long itemId);
+//	public TbItem  getById(Long itemId);
+
 //	TbItem query();
 }

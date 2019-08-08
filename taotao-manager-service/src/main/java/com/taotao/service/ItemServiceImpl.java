@@ -37,9 +37,5 @@ public class ItemServiceImpl  extends ServiceImpl<TbItemMapper, TbItem> implemen
 		return result;
 	}
 
-	@Override
-	public TbItem getById(Long itemId) {
-		return mapper.selectById(itemId);
-	}
 
 }

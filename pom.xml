@@ -59,11 +59,11 @@
         <jedis.version>2.7.2</jedis.version>
         <solrj.version>4.10.3</solrj.version>
         <dubbo.version>2.5.3</dubbo.version>
-    <!--    <zookeeper.version>3.4.7</zookeeper.version>
-        <zkclient.version>0.1</zkclient.version>-->
+       <zookeeper.version>3.4.7</zookeeper.version>
+        <zkclient.version>0.1</zkclient.version>
 
-        <zookeeper.version>3.5.5</zookeeper.version>
-        <zkclient.version>0.11</zkclient.version>
+     <!--   <zookeeper.version>3.5.5</zookeeper.version>-->
+
         <activemq.version>5.13.0</activemq.version>
         <freemarker.version>2.3.23</freemarker.version>
         <quartz.version>2.2.2</quartz.version>
@@ -72,7 +72,9 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <freemarker.version>2.3.23</freemarker.version>
+        <jboss.netty.version>3.2.5.Final</jboss.netty.version>
 
+        <javassist.version>3.18.0-GA</javassist.version>
     </properties>
     <!-- 就是管理版本的标签   其下的dependencies标签只是版本的管理 并不依赖jar-->
     <dependencyManagement>
@@ -270,7 +272,17 @@
                 <version>${freemarker.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.jboss.netty</groupId>
+                <artifactId>netty</artifactId>
+                <version>${jboss.netty.version}</version>
+            </dependency>
 
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${javassist.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
