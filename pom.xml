@@ -27,6 +27,9 @@
         <module>taotao-cart-service</module>
         <module>redis</module>
         <module>taotao-cart-web</module>
+        <module>taotao-order-interface</module>
+        <module>taotao-order-service</module>
+        <module>taotao-order-web</module>
     </modules>
 
     <packaging>pom</packaging>

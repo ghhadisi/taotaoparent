@@ -6,8 +6,8 @@ import lombok.Data;
 
 @Data
 public class TbOrderItem {
-    @TableId(value = "id",type = IdType.AUTO)
-    private Long itemId;
+    @TableId(value = "id",type = IdType.INPUT)
+    private int id;
 
     private String orderId;
 

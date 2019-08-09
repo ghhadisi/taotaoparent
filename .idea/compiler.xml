@@ -24,6 +24,9 @@
         <module name="taotaocartinterface" />
         <module name="taotaocartservice" />
         <module name="taotaocartweb" />
+        <module name="taotaoorderinterface" />
+        <module name="taotaoorderservice" />
+        <module name="taotaoorderweb" />
         <module name="taotaosso" />
         <module name="taotaossointerface" />
         <module name="taotaossoweb" />
