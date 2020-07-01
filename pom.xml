@@ -69,7 +69,7 @@
 
         <activemq.version>5.13.0</activemq.version>
         <freemarker.version>2.3.23</freemarker.version>
-        <quartz.version>2.2.2</quartz.version>
+        <quartz.version>2.3.2</quartz.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
